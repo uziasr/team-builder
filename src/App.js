@@ -3,6 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import TeamMember from './components/TeamMember'
 import Form from './components/Form'
+import {Row} from 'reactstrap';
+import styled from 'styled-components'
+
+const MemberWrap = styled.div`
+  margin: 3% auto;
+  display: flex;
+  justify-content: center;
+`
+const FormWrap = styled.div`
+  margin: 3% auto;
+  display: flex;
+  justify-content: center;
+`
 
 function App() {
   const [member, setMember] = useState([{
@@ -22,8 +35,12 @@ function App() {
 
   return (
     <div className="App">
-      <Form addMember={addMember  }/>
-      <TeamMember obj={member}/>
+    <FormWrap>
+      <Form addMember={addMember}/>
+    </FormWrap>
+      <MemberWrap>
+        <TeamMember obj={member}/>
+      </MemberWrap>
     </div>
   );
 }

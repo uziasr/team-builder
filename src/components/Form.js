@@ -1,6 +1,16 @@
 import React, {useState} from 'react'
-import TeamMember from './TeamMember';
+import styled from 'styled-components'
 
+const FormWrap = styled.div`
+  margin: 3% auto;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+`
+const ButtonWrap = styled.div`
+margin:20% auto;
+
+`
 function Form(props){
     console.log(props)
     const [member, setMember] = useState({
@@ -23,6 +33,7 @@ function submitForm(event){
 }
     return(
         <form onSubmit={submitForm}>
+        <FormWrap>
       <label htmlFor="name">Name</label>
       <input
         id="title"
@@ -32,20 +43,25 @@ function submitForm(event){
         value = {member.name}
       />
       <label htmlFor="email">Email</label>
-      <textarea
+      <input
         id="member"
+        type="text"
         name="email"
         onChange={handleChanges}
         value = {member.email}
       />
       <label htmlFor="role">Role</label>
-      <textarea
+      <input
         id="member"
+        type="text"
         name="role"
         onChange={handleChanges}
         value = {member.role}
       />
+      <ButtonWrap>
       <button type="submit">Add member</button>
+      </ButtonWrap>
+      </FormWrap>
     </form>
     )
 }
