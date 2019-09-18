@@ -13,7 +13,7 @@ function App() {
 
   function addMember(mem){
     const newMember ={
-      name: mem.title,
+      name: mem.name,
       email: mem.email,
       role: mem.role
     }
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Form addMember={addMember}/>
+      <Form addMember={addMember  }/>
       <TeamMember obj={member}/>
     </div>
   );

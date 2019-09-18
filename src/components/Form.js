@@ -27,21 +27,21 @@ function submitForm(event){
       <input
         id="title"
         type="text"
-        name="title"
+        name="name"
         onChange={handleChanges}
         value = {member.name}
       />
       <label htmlFor="email">Email</label>
       <textarea
         id="member"
-        name="body"
+        name="email"
         onChange={handleChanges}
         value = {member.email}
       />
       <label htmlFor="role">Role</label>
       <textarea
         id="member"
-        name="body"
+        name="role"
         onChange={handleChanges}
         value = {member.role}
       />
